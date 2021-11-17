@@ -1,0 +1,131 @@
+.toggle {
+    color: $white;
+    cursor: pointer;
+    font-weight: bold;
+    line-height: 20px;
+    padding: 15px 40px 15px 0;
+    position: relative;
+
+    &:after {
+        border: .25rem solid white;
+        border-bottom: 0;
+        border-left: 0;
+        border-radius: 1px;
+        content: '';
+        height: 1rem;
+        position: absolute;
+        right: 20px;
+        transform: rotate(45deg);
+        transition: all .2s ease-in-out;
+        width: 1rem;
+    }
+
+    &.is-visible {
+        height: auto;
+
+        &:after {
+            transform: rotate(135deg);
+        }
+    }
+}
+
+.toggle-content {
+    &.collapsed {
+        padding-bottom: 5px;
+    }
+}
+
+footer {
+    background-color: #222222;
+
+    color: #FFFFFF;
+
+    .toggle {
+        font-family: Montserrat;
+        font-style: italic;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    a {
+        transition: color ease .25s;
+    }
+
+    .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: auto;
+        padding: 20px;
+        text-transform: uppercase;
+
+    }
+
+    .block {
+        @include desktop {
+            border-bottom: 0;
+            margin-bottom: 0;
+            width: 25%;
+        }
+        width: 100%;
+
+
+        a {
+            display: inline-block;
+            width: 100%;
+            color: white; 
+            text-decoration: none;
+        }
+
+        .toggle {
+
+            &:after {
+                @include desktop {
+                    border: 0;
+                }
+            }
+
+        }
+
+        .toggle-content {
+            @include desktop {
+                border: 0;
+                height: auto !important;
+                transform: scaleY(1);
+            }
+
+
+            &.collapsed {
+                @include desktop {
+                    padding-bottom: 0;
+                    padding-left: 0;
+                }
+
+                padding: 0 0 20px 20px;
+                border-bottom: 1px solid white;
+
+            }
+        }
+    }
+
+    & a {
+        @include desktop {
+            &:hover {
+                color: red;
+            }
+        }
+    }
+
+    .bottom {
+        background: $gradient;
+        font-size: 14px;
+        padding: 20px;
+        text-align: center;
+    }
+}
+
+#copyright {
+    width: 100%;
+}
+

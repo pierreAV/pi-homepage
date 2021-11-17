@@ -1,0 +1,78 @@
+#load-fp-spin {
+    background-color: $white; //rgba(255, 255, 255, .9);
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1100;
+
+    .load-fp-content {
+        opacity: 1;
+        position: relative;
+    }
+
+    .load-fp-foreground {
+        display: table;
+        height: 100%;
+        text-align: center;
+        width: 100%;
+    }
+
+    .load-fp-message {
+        display: table-cell;
+        vertical-align: middle;
+        width: 100%;
+    }
+}
+
+
+
+.Spinner-lg-primary {
+    animation: vx_spin 620ms infinite linear;
+    background: url('../img/spin-loader.svg');
+    content: '';
+    display: block;
+    height: 128px;
+    opacity: .56;
+    width: 128px;
+}
+
+.Spinner {
+    margin: 0 auto;
+}
+
+
+
+
+@keyframes vx_spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+/*
+@keyframes vx_fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes vx_fade-out {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+*/

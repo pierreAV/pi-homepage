@@ -1,0 +1,259 @@
+// Display for all input fields (except buttons and checkbox)
+%forms {
+    background: $input-background;
+    border: $form-border;
+    border-radius: $border-radius;
+    display: block;
+    font-size: 1rem;
+    line-height: 1;
+    margin-bottom: .5rem;
+    max-width: 100%;
+    outline: none;
+    padding: .75rem;
+    width: 100%;
+}
+
+// Input fields on hover
+%forms-hover {
+    border: $form-border-hover;
+}
+
+// Input fields on focus
+%forms-focus {
+    border: $form-border-focus;
+}
+
+// Variable containing all input fields
+#{$forms} {
+    @extend %forms;
+    &:hover {
+        @extend %forms-hover;
+    }
+    &:focus,
+    &:active {
+        @extend %forms-focus;
+    }
+}
+
+textarea {
+    height: auto;
+    overflow: auto;
+}
+
+fieldset {
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+    margin: $margins 0;
+    padding: $padding;
+}
+
+legend {
+    font-weight: bold;
+    padding: 0 .5rem;
+}
+
+// Fix issues with select
+select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background: #fff url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E") no-repeat right .75rem center;
+    background-size: 8px 10px;
+    color: $font-color;
+    height: 47px;
+    line-height: 1; // ensures text doesn't get cut off
+}
+
+// Make range full width
+[type='range'] {
+    width: 100%;
+}
+
+// Labels
+label {
+    display: block;
+    font-weight: 600;
+    //margin: 1rem 0 .5rem;
+    max-width: 100%;
+}
+
+
+/*
+.split-form {
+    // Split forms have right aligned labels and margins on the column
+    label {
+        margin-bottom: 1rem;
+        padding: 0 .5rem;
+        text-align: right;
+    }
+}
+*/
+
+// Form validation
+input,
+select,
+textarea {
+    &.has-error {
+        border: 1px solid $error;
+    }
+    &.is-success {
+        border: 1px solid $success;
+    }
+    &:hover,
+    &:focus,
+    &:active {
+        &.has-error {
+            @extend .has-error;
+        }
+        &.is-success {
+            @extend .is-success;
+        }
+    }
+}
+
+$magic-radio-size: 20px !default;
+$magic-checkbox-size: 20px !default;
+$magic-dot-size: 8px !default;
+$magic-border-color: #c0c0c0 !default;
+$magic-main-color: #3e97eb !default;
+$magic-disabled-color: lighten($magic-border-color,
+14%) !default;
+$magic-disabled-checked-color: lighten($magic-main-color,
+30%) !default;
+@keyframes hover-color {
+    from {
+        border-color: $magic-border-color;
+    }
+    to {
+        border-color: $magic-main-color;
+    }
+}
+
+[type='radio'],
+[type='checkbox'] {
+    display: none;
+    position: absolute;
+}
+
+[type='radio']+label,
+[type='checkbox']+label {
+    margin: 1rem .5rem .5rem;
+    cursor: pointer;
+    display: block;
+    padding-left: 30px;
+    position: relative;
+    &:hover {
+        &:before {
+            animation-duration: .4s;
+            animation-fill-mode: both;
+            animation-name: hover-color;
+        }
+    }
+    &:before {
+        border: 1px solid $magic-border-color;
+        content: '';
+        display: inline-block;
+        height: $magic-checkbox-size;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: $magic-checkbox-size;
+    }
+    &:after {
+        content: '';
+        display: none;
+        position: absolute;
+    }
+}
+
+[type='radio'][disabled]+label,
+[type='checkbox'][disabled]+label {
+    color: $magic-disabled-color;
+    cursor: not-allowed;
+    &:hover,
+    &:before,
+    &:after {
+        cursor: not-allowed;
+    }
+    &:hover {
+        &:before {
+            border: 1px solid $magic-disabled-color;
+            animation-name: none;
+        }
+    }
+    &:before {
+        border-color: $magic-disabled-color;
+    }
+}
+
+[type='radio']:checked+label,
+[type='checkbox']:checked+label {
+    &:before {
+        animation-name: none;
+    }
+    &:after {
+        display: block;
+    }
+}
+
+[type='checkbox']+label {
+    &:before {
+        border-radius: 3px;
+    }
+    &:after {
+        top: 2px;
+        left: 7px;
+        box-sizing: border-box;
+        width: 6px;
+        height: 12px;
+        transform: rotate(45deg);
+        border-width: 2px;
+        border-style: solid;
+        border-color: #fff;
+        border-top: 0;
+        border-left: 0;
+    }
+}
+
+[type='checkbox']:checked+label {
+    &:before {
+        border: $magic-main-color;
+        background: $magic-main-color;
+    }
+}
+
+[type='checkbox']:checked[disabled]+label {
+    &:before {
+        border: $magic-disabled-checked-color;
+        background: $magic-disabled-checked-color;
+    }
+}
+
+[type='radio']+label {
+    &:before {
+        border-radius: 50%;
+    }
+    &:after {
+        top: 6px;
+        left: 6px;
+        width: $magic-dot-size;
+        height: $magic-dot-size;
+        border-radius: 50%;
+        background: $magic-main-color;
+    }
+}
+
+[type='radio']:checked+label {
+    &:before {
+        border: 1px solid $magic-main-color;
+    }
+}
+
+[type='radio']:checked[disabled]+label {
+    &:before {
+        border: 1px solid $magic-disabled-checked-color;
+    }
+    &:after {
+        background: $magic-disabled-checked-color;
+    }
+}

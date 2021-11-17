@@ -1,0 +1,14 @@
+.hidden {
+    display: none;
+}
+
+.disabled {
+    cursor: default;
+    pointer-events: none;
+    user-select: none;
+}
+
+.full-container {
+    max-width: 100%;
+    padding: 0 $padding;
+}

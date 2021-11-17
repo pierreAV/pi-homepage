@@ -1,0 +1,31 @@
+.alert-danger {
+    background-color: $alert-danger-bg;
+    border-color: $alert-danger-border;
+    color: $alert-danger-text;
+}
+
+.alert-success {
+    background-color: $alert-success-bg;
+    border-color: $alert-success-border;
+    color: $alert-success-text;
+}
+
+.alert {
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    margin-bottom: 1rem;
+    padding: .75rem 1.25rem;
+    position: relative;
+}
+/*
+.box {
+    border: 1px solid #ccc;
+    margin: 0 auto;
+    width: 600px;
+}
+
+.has-error {
+    background-color: #ffff99;
+    border-color: #cc0000;
+}
+*/

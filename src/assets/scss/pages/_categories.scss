@@ -1,0 +1,164 @@
+.banner-gradient {
+    background: $gradient;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 25px;
+    color: white;
+    align-items: center;
+    @include desktop {
+        text-align: left;
+        flex-wrap: nowrap;
+        flex-direction: row;
+    }
+
+    .block-title {
+        text-align: center;
+        @include desktop {
+            text-align: left;
+        }
+    }
+    .block-item {
+        width: 33%;
+    }
+    
+
+    .thin {
+        color: white;
+    }
+    .title {
+        font-family: Montserrat;
+        font-style: italic;
+        font-weight: 900;
+        font-size: 36px;
+        line-height: 44px;
+    }
+    .block-logo {
+        width: 100%;
+        min-width: 35%;
+        
+        margin-top: 20px;
+        @include desktop {
+            width: 30%;
+            margin-top: 0;
+        }
+    }
+    .cat-actuelle {
+        font-weight: bold;
+    }
+    .quali {
+        margin-bottom: 0;
+        @include desktop {
+            font-size: 13px;
+            line-height: 16px;
+        }
+    }
+}
+
+.block-produits {
+    padding: 0 20px;
+    justify-content: space-evenly;
+    user-select: none;
+
+    .product-card {
+        margin: 20px 0;
+
+        &:hover {
+            transform: scale(1.02);
+        }
+    }
+
+
+}
+
+.block-info {
+    border: $border-gray;
+    border-radius: 6px;
+    margin: 20px;
+
+    .block-cat {
+        padding: 20px;
+        border-radius: 6px 6px 0 0;
+        border-bottom: $border-gray;
+        span {
+            font-family: Montserrat;
+            font-style: italic;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 20px;
+            color: #000000;
+        }
+        ul {
+            padding: 10px 20px;
+            margin: 0;
+            position: relative;
+        }
+
+        li {
+            padding: 10px;
+            list-style: none;
+        }
+        li, a {
+            color: $purple;
+            font-weight: 500;
+            font-size: 16px;
+        }
+        li:before {
+            border: .25rem solid $purple;
+            border-bottom: 0;
+            border-left: 0;
+            border-radius: 1px;
+            content: '';
+            height: 1rem;
+            position: absolute;
+            transform: rotate(45deg);
+            width: 1rem;
+            left: 0;
+        }
+    }
+
+    .ministere {
+        padding: 20px 30px;
+        text-align: center;
+        border-bottom: $border-gray;
+
+        @include desktop {
+            text-align: left;
+        }
+    }
+}
+
+.bg-gray {
+    background-color: $light-gray;
+    min-height: 23px;
+}
+
+.bg-gradient {
+    background: $gradient;
+}
+
+.garanties {
+    
+    text-align: center;
+    &>div {
+        padding: 11px 0;
+    }
+    .bg-gradient, span {
+        font-style: italic;
+        font-weight: bold;
+        font-family: Montserrat;
+        font-size: 13px;
+        line-height: 16px;
+        color: #333333;
+    }
+    .bg-gradient {
+        color: white;
+    }
+
+    .cat {
+        border-bottom: $border-gray;
+    }
+    .cat:last-child {
+        border-bottom: none;
+    }
+}

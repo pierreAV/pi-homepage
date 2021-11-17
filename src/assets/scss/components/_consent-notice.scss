@@ -1,0 +1,103 @@
+.consent-notice {
+	@include tablet {
+		padding: 15px 38px 13px 30px;
+    }
+	@include desktop {
+		button:hover,
+		button:focus {
+			background-color: $white;
+			color: #000;
+		}
+    }
+	background-color: rgba(35, 35, 35, .9);
+	border-top: 1px solid $white;
+	bottom: 0;
+	box-sizing: border-box;
+	color: $white;
+	font-size: 13px;
+	left: 0;
+	line-height: 1.23;
+	padding: 12px;
+	position: fixed;
+	right: 0;
+	z-index: 1500;
+}
+
+.consent-notice__content {
+	margin: 0 auto;
+	max-width: 1200px;
+}
+
+.consent-notice__group {
+	@include tablet {
+		flex-direction: inherit;
+		margin: -15px;
+	}
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	margin: -5px;
+}
+
+.consent-notice__group-item {
+	@include tablet {
+		margin: 15px;
+	}
+	margin: 5px;
+	padding: 0 10px;
+	width: 100%;
+}
+
+.consent-notice__text {
+	flex: 1 1 100%;
+	font-size: 13px;
+    color: #fff;
+
+    a,
+    button {
+        background: 0 0;
+        border-radius: 0;
+        border: 0;
+        color: inherit;
+        display: inline;
+        padding: 0;
+        text-align: inherit;
+        text-decoration: underline;
+    }
+
+    &:before {
+		content: '';
+		float: right;
+		height: 20px;
+		width: 28px;
+	}
+}
+
+button.consent-notice__close-btn {
+	cursor: pointer;
+	color: inherit;
+	position: absolute;
+	right: 0;
+	top: 0;
+	background: 0 0;
+	border: 0;
+	border-radius: 0;
+	height: 30px;
+	width: 30px;
+	padding: 0;
+	text-align: center;
+}
+
+button.consent-notice__action-btn {
+	background: 0 0;
+	border-radius: 4px;
+	border: 1px solid #fff;
+	color: #fff;
+	cursor: pointer;
+	display: block;
+	flex: 1 1 0%;
+	font: inherit;
+	min-width: 170px;
+	padding: 12px 14px;
+	text-align: center;
+}

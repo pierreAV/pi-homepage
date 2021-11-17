@@ -1,0 +1,379 @@
+main {
+    .model {
+        background: $body-background;
+    }
+}
+
+.options-incluses,
+.equipements-serie,
+.question,
+.fiche-infos,
+.fiche-technique,
+.image,
+.driiveme {
+    background: $white;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+    margin: 30px 0;
+    padding: 15px 10px;
+}
+
+.image {
+    margin-top: 0;
+}
+
+.callToAction {
+    @include desktop {
+        position: relative;
+    }
+
+    bottom: 0;
+    display: block;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    z-index: 2;
+    height: 50px;
+
+    .interesser {
+        background: $primary-color;
+    }
+
+    .reserver {
+        background: $header-secondary-color;
+    }
+
+    a {
+        color: $white;
+        float: left;
+        height: 50px;
+        line-height: 50px;
+        width: 50%;
+
+        &:hover {
+            color: $white;
+        }
+    }
+}
+
+.model {
+
+    @include desktop {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    padding-left: 0;
+    padding-right: 0;
+
+    .promotion {
+        left: 40px;
+        top: 0;
+    }
+
+    .ecogreen {
+        padding: 10px;
+    }
+
+    .subtitle {
+        color: $primary-color;
+        font-family: Poppins;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: normal;
+        line-height: 36px;
+    }
+
+    h1,
+    .h1 {
+        color: rgba(0, 0, 0, .75);
+        font-family: $heading-font-family;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: normal;
+        line-height: 36px;
+        margin: 5px 10px;
+        text-align: center;
+
+        &:after {
+            display: none;
+        }
+    }
+
+    h2,
+    .h2 {
+        font-family: $font-family;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 14px;
+        margin: 5px 10px;
+        text-align: center;
+
+        &:after {
+            display: none;
+        }
+    }
+
+
+
+    .grid {
+        /*display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;*/
+        position: relative;
+    }
+
+    .descriptif {
+        @include desktop {
+            background: $white;
+            box-shadow: rgba(0, 0, 0, .25) -.25rem .5rem 1rem;
+            min-width: 400px;
+            position: absolute;
+            right: 0;
+            top: 40px;
+            width: 30%;
+            z-index: 1;
+        }
+    }
+
+    .spotlight {
+        img {
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+
+    .image {
+        @include desktop {
+            width: 70%;
+        }
+
+        display: block;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        width: 100%;
+
+
+
+
+        >a {
+            display: block;
+            position: relative;
+        }
+
+    }
+
+    .left,
+    .right {
+        width: 50%;
+    }
+
+    .right {
+        text-align: right;
+    }
+
+    .amount,
+    .loa {
+        color: $white;
+        display: flex;
+        flex-wrap: wrap;
+        float: left;
+        font-size: 16px;
+        height: 60px;
+        justify-content: space-around;
+        line-height: 60px;
+        padding-left: 15px;
+        padding-right: 15px;
+        text-align: left;
+        width: 100%;
+
+        a {
+            color: $white;
+        }
+
+        span {
+            font-size: 180%;
+        }
+
+        &img path {
+            fill: $white;
+
+        }
+
+        a:hover,
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    .amount {
+        background: #009d76;
+        margin-bottom: 10px;
+    }
+
+    .loa {
+        background: #0d4d9f;
+
+        small {
+            font-size: 60%;
+        }
+    }
+}
+
+.primary-infos,
+.secondary-infos {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 0;
+    padding: 0;
+    width: 100%;
+
+    li {
+        @include desktop {
+            width: 32%;
+        }
+
+        list-style: none;
+        margin-bottom: 20px;
+        padding-left: 5px;
+        width: 50%;
+
+        img {
+            float: left;
+            margin-right: 10px;
+        }
+
+        .infos {
+            float: left;
+        }
+
+        .title {
+            color: rgba(0, 0, 0, .6);
+            display: block;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 17px;
+            text-transform: uppercase;
+            width: 100%;
+        }
+
+        .detail {
+            color: #000;
+            display: block;
+            font-size: 16px;
+            font-weight: normal;
+            line-height: 19px;
+            width: 100%;
+        }
+    }
+}
+
+.ecogreen {
+    color: #009b30;
+    display: block;
+    text-align: center;
+}
+
+.repriseLink {
+    a {
+        background-color: #0d4d9f;
+        border-color: #0d4d9f;
+        display: block;
+        margin: 20px auto;
+        max-width: 500px;
+    }
+
+}
+
+.modal-content {
+    .h1 {
+        display: block;
+        margin-bottom: 10px;
+        margin-left: 0;
+    }
+}
+
+
+.maxBtn {
+    background: $primary-color;
+    border-radius: 40px;
+    color: $white;
+    display: flex;
+    font-size: 24px;
+    height: 80px;
+    line-height: 29px;
+    margin: 0 auto 20px;
+    max-width: 400px;
+    position: relative;
+    text-align: center;
+    width: 90%;
+
+    img {
+        display: block;
+        left: 0;
+        padding-bottom: 15px;
+        padding-left: 30px;
+        padding-right: 0;
+        padding-top: 15px;
+        position: absolute;
+        top: 0;
+    }
+
+    .content {
+        display: block;
+        padding-bottom: 10px;
+        padding-left: 80px;
+        padding-top: 10px;
+        position: absolute;
+        width: 100%;
+    }
+}
+
+.question {
+    color: #000000;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 22px;
+    text-align: center;
+
+    .title {
+        color: rgba(0, 0, 0, .75);
+        display: block;
+        font-size: 24px;
+        line-height: 29px;
+        margin-bottom: 20px;
+        text-align: center;
+        width: 100%;
+    }
+}
+
+/*
+.toggle-modal img{
+    pointer-events: none;
+}
+*/
+
+
+.colorSwatch {
+    line-height: 35px;
+    margin: 10px;
+
+    a {
+        border-radius: 100%;
+        border: 4px solid #fafafa;
+        box-shadow: rgba(0, 0, 0, .25) -.25rem .5rem 1rem;
+        display: inline-block;
+        height: 34px;
+        margin: 5px;
+        text-indent: -10000px;
+        width: 34px;
+
+        &:hover {
+            border: 4px solid $primary-color;
+        }
+    }
+
+}

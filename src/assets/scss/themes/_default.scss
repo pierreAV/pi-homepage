@@ -1,0 +1,16 @@
+.hide-xl {
+    display: block;
+}
+
+@include desktop {
+    .inline-label {
+        label {
+            display: inline-block;
+            margin-left: 0;
+            margin-right: 10px;
+        }
+    }
+    .hide-xl {
+        display: none;
+    }
+}

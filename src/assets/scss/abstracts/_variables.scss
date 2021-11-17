@@ -1,0 +1,252 @@
+$gradient : linear-gradient(90deg, #5B40D7 -4.17%, #E85F62 104.49%);
+$light-gray : #E5E5E5;
+$purple : #5B40D7;
+$border-gray : 1px solid rgba(0, 0, 0, 0.11);
+
+//==============================================================================
+// Header
+//==============================================================================
+$header-background: white !default;
+$header-color: white !default;
+$header-color-hover: #f25900 !default;
+$header-background-hover: $purple !default;
+$header-secondary-color: #f29600 !default;
+// dropdown
+$dropdown-color: #666 !default;
+$dropdown-color-hover: white !default;
+$dropdown-background: white !default;
+$dropdown-background-hover: white !default;
+//==============================================================================
+// Menu Burger
+//==============================================================================
+$menu-burger-color: $purple !default;
+$menu-burger-color-hover: $purple !default;
+
+
+
+
+
+
+
+
+
+
+
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+/// Regular font family
+/// @type List
+$text-font-stack: 'Open Sans',
+'Helvetica Neue Light',
+'Helvetica Neue',
+'Helvetica',
+'Arial',
+sans-serif !default;
+/// Code (monospace) font family
+/// @type List
+$code-font-stack: 'Courier New',
+'DejaVu Sans Mono',
+'Bitstream Vera Sans Mono',
+'Monaco',
+monospace !default;
+$font-stack-system: (system-ui, -apple-system, BlinkMacSystemFont, 'Avenir Next', 'Avenir', 'Segoe UI', 'Lucida Grande', 'Helvetica Neue', 'Helvetica', 'Fira Sans', 'Roboto', 'Noto', 'Droid Sans', 'Cantarell', 'Oxygen', 'Ubuntu', 'Franklin Gothic Medium', 'Century Gothic', 'Liberation Sans', sans-serif, );
+/// Copy text color
+/// @type Color
+$text-color: #111922 !default;
+/// Main brand color
+/// @type Color
+$brand-color: #fff !default;
+/// Light grey
+/// @type Color
+$light-grey: rgb(237, 237, 237) !default;
+/// Medium grey
+/// @type Color
+$mid-grey: rgb(153, 153, 153) !default;
+/// Dark grey
+/// @type Color
+$dark-grey: rgb(68, 68, 68) !default;
+/// Container's maximum width
+/// @type Length
+$max-width: 1440px !default;
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+$breakpoints: ('small': 320px, 'medium': 768px, 'large': 1024px, 'xl': 1400px) !default;
+$tablet-width: map-get($breakpoints, 'medium');
+$desktop-width: map-get($breakpoints, 'large');
+$large-width: map-get($breakpoints, 'xl');
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url: 'http://cdn.example.com/assets/';
+$base-url: '/assets/' !default;
+// COLORS
+$box-shadow-color: rgba(0, 0, 0, .2);
+// Cool
+$aqua: #7fdbff;
+$blue: #0074d9;
+$navy: #001f3f;
+$teal: #39cccc;
+$green: #2ecc40;
+$olive: #3d9970;
+$lime: #01ff70;
+// Warm
+$yellow: #ffdc00;
+$orange: #ff851b;
+$red: #ff4136;
+$fuchsia: #f012be;
+$maroon: #85144b;
+$pink: #f05399;
+// Gray scale
+$white: #fff;
+$silver: #ddd;
+$gray: #aaa;
+$black: #111;
+//==============================================================================
+// Global Colors
+//==============================================================================
+$background: $white !default;
+$primary-color: #f25900 !default;
+$secondary-color: #29de7d !default;
+$accent-color: #ccc !default;
+$alternate-background: #fafafa !default;
+$alternate-color: #404040 !default;
+$link-color: $primary-color !default;
+$link-hover-color: darken($link-color, 15%) !default;
+$highlight: #ffeea8 !default;
+$error: #d33c40 !default;
+$success: #29de7d !default;
+$bq-border: 16px solid #f0f0f0 !default;
+
+
+
+
+
+
+
+//==============================================================================
+// Typography
+//==============================================================================
+// Body
+$font-size: 1rem !default;
+$body-font-size: 1rem !default;
+$font-style: normal !default;
+$font-variant: normal !default;
+$font-weight: normal !default;
+$font-color: #404040 !default;
+$font-family: 'Montserrat', sans-serif !default;
+$line-height: 1.4 !default;
+// Headings
+$heading-font-color: #404040 !default;
+$heading-font-weight: 600 !default;
+$heading-font-family: 'Poppins', sans-serif !default;
+$heading-line-height: 1.2 !default;
+// Mobile heading font size
+$h1-mobile: 1.75rem !default;
+$h2-mobile: 1.5rem !default;
+$h3-mobile: 1.25rem !default;
+$h4-mobile: 1.1rem !default;
+$h5-mobile: 1rem !default;
+// Heading font size
+$h1: 2.25rem !default;
+$h2: 2rem !default;
+$h3: 1.75rem !default;
+$h4: 1.5rem !default;
+$h5: 1.25rem !default;
+//==============================================================================
+// Spacing
+//==============================================================================
+$padding: 1rem !default;
+$margins: 1.5rem !default;
+$content-padding: 60px 0 !default;
+$content-padding-mobile: 30px 0 !default;
+//==============================================================================
+// Borders
+//==============================================================================
+$border-width: 1px !default;
+$border-style: solid !default;
+$border-color: #dedede !default;
+$border-radius: 4px !default;
+$borders: $border-width $border-style $border-color !default;
+//==============================================================================
+// Buttons
+//==============================================================================
+$button-background: $primary-color !default;
+$button-background-hover: darken($button-background, 10%) !default;
+$button-color: #fff !default;
+$button-font-weight: 600 !default;
+$button-font-family: $font-stack-system !default;
+$button-font-size: 1rem !default;
+$button-border-width: 1px !default;
+$button-border-style: solid !default;
+$button-border-color: $button-background !default;
+$button-border-radius: 200px !default;
+$button-text-transform: none !default;
+// Accent buttons
+$accent-button-background: $secondary-color !default;
+$accent-button-color: #fff !default;
+$accent-button-color-hover: #fff !default;
+// Muted Buttons
+$muted-border: 1px solid $accent-color !default;
+$muted-border-hover: 1px solid darken($accent-color, 30%) !default;
+$muted-background: transparent !default;
+$muted-background-hover: transparent !default;
+$muted-color: darken($accent-color, 50%) !default;
+$muted-color-hover: darken($accent-color, 50%) !default;
+// Round Buttons
+$round-buttons: 40px !default;
+//==============================================================================
+// Forms
+//==============================================================================
+$forms: ('[type=color], [type=email], [type=number], [type=password], [type=search], [type=tel], [type=text], select, textarea');
+$buttons: ('.button, a.button, button, [type=submit], [type=reset], [type=button]');
+$input-background: transparent !default;
+$placeholder: darken($accent-color, 20%) !default;
+$form-border: 1px solid $border-color !default;
+$form-border-hover: 1px solid darken($border-color, 10%) !default;
+$form-border-focus: 1px solid #199dff !default;
+//==============================================================================
+// Tables
+//==============================================================================
+$stripes: #fafafa !default;
+$caption: #aaa !default;
+//==============================================================================
+// Code
+//==============================================================================
+$code-color: $font-color !default;
+$code-size: 14px !default;
+$code-family: Menlo,
+monospace !default;
+$code-background: transparent !default;
+$code-borders: $borders !default;
+//==============================================================================
+// Arrow Steps
+//==============================================================================
+$arrow-steps-size: 32px;
+$arrow-steps-color: $white;
+$arrow-steps-main-background: $white;
+$arrow-steps-background: #333;
+$arrow-steps-selected-background: #555;
+//==============================================================================
+// Components
+//==============================================================================
+$back-to-top-background: rgba(0, 0, 0, .5);
+//==============================================================================
+// Tips
+//==============================================================================
+$tips-background: #333;
+//==============================================================================
+// Alert
+//==============================================================================
+$alert-danger-bg: #f8d7da;
+$alert-danger-border: #f5c6cb;
+$alert-danger-text: #721c24;
+
+$alert-success-bg: #d4edda;
+$alert-success-border: #c3e6cb;
+$alert-success-text: #155724;
+//==============================================================================
+// Others
+//==============================================================================
+$body-background: #eaeded;

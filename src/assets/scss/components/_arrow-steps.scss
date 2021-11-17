@@ -1,0 +1,59 @@
+.arrow-steps {
+    & ol {
+        list-style-type: none;
+        margin: 1rem 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    & li {
+        background: $arrow-steps-background;
+        color: $arrow-steps-color;
+        display: inline-block;
+        height: $arrow-steps-size;
+        line-height: $arrow-steps-size;
+        margin: 0 1px;
+        padding: 0 0 0 $arrow-steps-size / 2;
+        position: relative;
+        width: 31%;
+
+        &:before {
+            border-bottom: $arrow-steps-size / 2 solid transparent;
+            border-left: $arrow-steps-size / 2 solid $arrow-steps-main-background;
+            border-top: $arrow-steps-size / 2 solid transparent;
+            content: '';
+            left: 0;
+            position: absolute;
+            top: 0;
+        }
+
+        &:after {
+            border-bottom: $arrow-steps-size / 2 solid transparent;
+            border-left: $arrow-steps-size / 2 solid $arrow-steps-background;
+            border-top: $arrow-steps-size / 2 solid transparent;
+            content: '';
+            left: 100%;
+            position: absolute;
+            top: 0;
+            z-index: 2;
+        }
+
+        &:first-child {
+            border-bottom-left-radius: 4px;
+            border-top-left-radius: 4px;
+            padding-left: 15px;
+
+            &:before {
+                border: 0;
+            }
+        }
+    }
+
+    & .current {
+        background: $arrow-steps-selected-background;
+
+        &:after {
+            border-left-color: $arrow-steps-selected-background;
+        }
+    }
+}

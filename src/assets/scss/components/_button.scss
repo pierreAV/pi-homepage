@@ -1,0 +1,249 @@
+// // Main button styling
+// %buttons {
+//     -webkit-appearance: none;
+//     background: $button-background;
+//     border: $button-border-width $button-border-style $button-border-color;
+//     border-radius: $button-border-radius;
+//     color: $button-color;
+//     cursor: pointer;
+//     display: inline-block;
+//     font-family: $button-font-family;
+//     font-size: $button-font-size;
+//     font-weight: $button-font-weight;
+//     line-height: 1.15;
+//     margin: 0 0 .5rem;
+//     outline: none;
+//     padding: .75rem 1.25rem;
+//     position: relative;
+//     text-align: center;
+//     text-decoration: none;
+//     text-transform: $button-text-transform;
+// }
+
+// // Buttons on hover
+// %buttons-hover {
+//     background: $button-background-hover;
+//     border-color: darken($button-border-color, 10%);
+//     color: $button-color;
+//     text-decoration: none;
+// }
+
+// // Buttons on focus
+// %buttons-focus {
+//     background: darken($button-background, 10%);
+//     border: $button-border-width $button-border-style darken($button-border-color, 10%);
+//     color: $button-color;
+//     text-decoration: none;
+// }
+
+// // Apply styles to .button class, button element, and button-based inputs
+// #{$buttons} {
+//     @extend %buttons;
+//     /*&::-moz-focus-inner {
+//         border: 0;
+//         padding: 0;
+//     }*/
+//     &:hover {
+//         @extend %buttons-hover;
+//     }
+//     &:focus,
+//     &:active {
+//         @extend %buttons-focus;
+//     }
+// }
+
+// // Secondary button color
+// .accent-button,
+// a.accent-button {
+//     background: $accent-button-background;
+//     border: 1px solid $accent-button-background;
+//     color: $accent-button-color;
+//     &:hover,
+//     &:focus,
+//     &:active {
+//         background: darken($accent-button-background, 10%);
+//         border: 1px solid darken($accent-button-background, 10%);
+//         color: $accent-button-color-hover;
+//     }
+// }
+
+// // Muted buttons
+// .muted-button,
+// a.muted-button {
+//     background: $muted-background;
+//     border: $muted-border;
+//     color: $muted-color;
+//     &:hover,
+//     &:focus,
+//     &:active {
+//         background: $muted-background-hover;
+//         border: $muted-border-hover;
+//         color: $muted-color-hover;
+//     }
+// }
+
+// // Round buttons
+// .round-button,
+// a.round-button {
+//     border-radius: $round-buttons;
+// }
+
+// // Square buttons
+// .square-button,
+// a.square-button {
+//     border-radius: 0;
+// }
+
+// // Full width buttons (block level)
+// .full-button,
+// a.full-button {
+//     display: block;
+//     width: 100%;
+// }
+
+// .btn-contact,
+// a.btn-contact {
+//     background: transparent;
+//     border: 2px solid #fff;
+//     color: #fff;
+//     font-size: 18px;
+//     height: 60px;
+//     line-height: 30px;
+//     margin: 20px;
+//     text-transform: uppercase;
+//     transition: all .25s ease;
+//     &:hover,
+//     &:hover {
+//         background: #000;
+//         border: 2px solid #000;
+//         color: #fff;
+//     }
+//     &:hover {
+//         color: #fff;
+//         &:before {
+//             width: 100%;
+//         }
+//     }
+// }
+
+// .btn-primary,
+// a.btn-primary,
+// .btn-secondary,
+// a.btn-secondary {
+//     background: transparent;
+//     border-radius: $button-border-radius;
+//     border: 2px solid $white;
+//     color: $white;
+//     display: inline-block;
+//     font-family: Poppins;
+//     font-size: 18px;
+//     font-style: normal;
+//     font-weight: 600;
+//     letter-spacing: 1px;
+//     line-height: 18px;
+//     margin: 20px 10px;
+//     min-height: 46px;
+//     padding: 13px 40px;
+//     position: relative;
+//     text-align: center;
+//     text-transform: uppercase;
+//     user-select: none;
+//     width: fit-content;
+
+//     &:hover {
+//         background: rgba(79, 79, 79, 0.4);
+//         background-blend-mode: multiply;
+//         text-decoration: none;
+//     }
+
+//     &:active {
+//         box-shadow: 0 0 5px 3px rgba(0, 0, 0, .4);
+//     }
+
+//     &[disabled='disabled'] {
+//         border: 0;
+//         padding: 14px 40px;
+//         pointer-events: none;
+//         &:before {
+//             background: rgba(255, 255, 255, .5);
+//             background-blend-mode: lighten;
+//             border-radius: $button-border-radius;
+//             content: '';
+//             display: block;
+//             height: 100%;
+//             left: 0;
+//             position: absolute;
+//             top: 0;
+//             width: 100%;
+//         }
+//     }
+// }
+
+// .btn-primary,
+// a.btn-primary {
+//     background: #009D76;
+//     border-color: #009D76;
+
+//     &:hover {
+//         background: linear-gradient(0deg, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), #009D76;
+//         background-blend-mode: multiply, normal;
+//     }
+
+//     &:active {
+//         box-shadow: 0 0 5px 3px rgba(0, 0, 0, .4);
+//     }
+// }
+
+
+
+// %btn-filter {
+//     background: white;
+//     border-radius: $button-border-radius;
+//     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+//     display: inline-block;
+//     font-family: Poppins;
+//     font-size: 16px;
+//     font-style: normal;
+//     font-weight: 600;
+//     letter-spacing: 1px;
+//     position: relative;
+//     text-align: center;
+//     user-select: none;
+//     width: fit-content;
+//     color: #4F4F4F;
+//     border: 2px solid transparent;
+//     text-decoration: none;
+
+//     &[disabled='disabled']{
+//         pointer-events: none;
+//         border: 2px solid #7F2F00;
+//     }
+
+//     @include desktop {
+//         &:hover {
+//             background-color:  #7F2F00;
+//             color: #FFFF;
+//         }
+//     }
+    
+//     &:active {
+//         background: #009D76;
+//         color: white;
+//     }
+// }
+
+// .btn-filter,
+// a.btn-filter {
+//     @extend %btn-filter;
+//     @include desktop {
+//         line-height: 16px;
+//         margin: 20px;
+//         min-height: 46px;
+//         padding: 15px 30px;
+//     }
+//     line-height: 16px;
+//     margin: 20px 15px;
+//     min-height: 36px;
+//     padding: 10px 15px;
+    
+// }
