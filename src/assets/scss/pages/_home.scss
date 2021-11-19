@@ -7,6 +7,7 @@
 }
 body {
     font-family: Montserrat;
+    user-select: none;
 }
 
 .hr-gradient {
@@ -41,6 +42,8 @@ body {
         font-style: normal;
         font-size: 16px;
         line-height: 28px;
+        max-width: 70%;
+        margin: 0 auto;
     }
 
     .title {
@@ -343,10 +346,14 @@ body {
     .block-img {
         margin: 5px;
         position: relative;
-        height: 400px;
+        height: 90vw;
+        @include desktop {
+            height: 45vw;
+            width: 100%;
+        }
         align-self: stretch;
         background-size: cover;
-        width: 100%;
+        background-position: center;
         
         &:hover {
             &:before {
@@ -539,7 +546,14 @@ body {
 }
 
 button {
-    background-color: $purple;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    color: #FFFFFF;
+
+
+    background-color: $button-green;
     text-transform: uppercase;
     text-align: center;
     padding: 15px 30px;
@@ -547,10 +561,25 @@ button {
     border: none;
     filter: drop-shadow(0px 1px 4px rgba(0, 0, 0, 0.25));
 
-    font-family: Montserrat;
-    font-style: italic;
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 20px;
-    color: #FFFFFF;
+    &:hover {
+        filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.25));
+    }
+
+    &:active {
+        &:after {
+            background: rgba(51, 51, 51, 0.2);
+            content: '';
+            height: 100%;
+            left: 0;
+            top: 0;
+            position: absolute;
+            width: 100%;
+            border-radius: 5px;
+        }
+    }
+
+    &:disabled {
+        background-color: $button-disabled;
+        filter: none;
+    }
 }
