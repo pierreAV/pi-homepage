@@ -9,7 +9,24 @@ body {
     font-family: Montserrat;
     user-select: none;
 }
+h1 {
+    font-family: Montserrat;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: #000000;
+    margin: 60px auto 0;
 
+    max-width: 30ch;
+
+    @include desktop {
+        max-width: none;
+        margin-top: 70px;
+    }
+
+}
 .hr-gradient {
     background-image: $gradient;
     height: 4px;
@@ -60,27 +77,30 @@ body {
     margin-bottom: 0;
 }
 
-.block-title-black {
-    font-style: italic;
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 20px;
-    text-align: center;
-    color: #000000;
-    position: relative;
-    margin: 20px 0;
-
-    &:after {
-        background: #333333;
-        content: '';
-        display: block;
-        height: 4px;
-        position: absolute;
-        bottom: -20px;
-        width: 43px;
-        left: 50%;
-        transform: translateX(-50%) skew(150deg);
+.block-title-black { 
+    h2, span {
+        font-style: italic;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: center;
+        color: #000000;
+        position: relative;
+        margin: 20px 0;
+    
+        &:after {
+            background: #333333;
+            content: '';
+            display: block;
+            height: 4px;
+            position: absolute;
+            bottom: -20px;
+            width: 43px;
+            left: 50%;
+            transform: translateX(-50%) skew(150deg);
+        }
     }
+    
 }
 
 .landing-block {
@@ -185,7 +205,7 @@ body {
     text-align: center;
     padding: 25px 30px;
     position: relative;
-    margin-top: 60px;
+    margin-top: 20px;
 
     .title {
         font-style: italic;
@@ -256,7 +276,9 @@ body {
     position: relative;
     margin-top: 270px;
     border-top: $border-gray;
-    
+    .block-title-black {
+        margin-top: 20px;
+    }
     .block-items {
         justify-content: space-evenly;
     }

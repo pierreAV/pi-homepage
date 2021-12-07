@@ -86,6 +86,9 @@ $large-width: map-get($breakpoints, 'xl');
 /// @example scss - When using a CDN
 ///   $base-url: 'http://cdn.example.com/assets/';
 $base-url: '/assets/' !default;
+
+
+
 // COLORS
 $box-shadow-color: rgba(0, 0, 0, .2);
 // Cool
