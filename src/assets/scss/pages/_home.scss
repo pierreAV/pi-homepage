@@ -9,6 +9,10 @@ body {
     font-family: Montserrat;
     user-select: none;
 }
+main {
+    background-color: white;
+
+}
 h1 {
     font-family: Montserrat;
     font-style: italic;
@@ -142,7 +146,6 @@ h1 {
         width: 95%;
         bottom: -40px;
         padding: 3px;
-        min-width: 350px;
         left: 50%;
         transform: translateX(-50%);
         border-radius: 6px;
@@ -154,7 +157,7 @@ h1 {
     }
     .bg-white {
         background-color: white;
-        padding: 20px;
+        padding: 50px 20px;
         border-radius: 6px;
 
         @include desktop {
@@ -164,6 +167,8 @@ h1 {
             @include desktop {
                 display: block;
             }
+            font-size: 20px;
+            word-wrap: break-word;
             //display: none;
         }
 
@@ -210,7 +215,6 @@ h1 {
     .title {
         font-style: italic;
         font-weight: bold;
-        font-size: 16px;
         padding: 0 5px;
     }
 
@@ -308,6 +312,9 @@ h1 {
         @include desktop {
             bottom: 30px;
         }
+    }
+    .auto-ex {
+        width: 70vw;
     }
 }
 
@@ -461,25 +468,11 @@ h1 {
     }
 
     .payment {
-        
-        span, img {
-            vertical-align: middle;
-        }
-        img {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .payment-logo {
             margin-left: 20px;
-        }
-        &:after {
-            @include desktop {
-                display: none;
-            }
-            background: rgba(0, 0, 0, 0.11);
-            content: '';
-            display: block;
-            height: 1px;
-            position: absolute;
-            width: 314px;
-            left: 50%;
-            transform: translateX(-50%) translateY(15px);
         }
     }
     
@@ -494,6 +487,19 @@ h1 {
             @include desktop {
                 text-align: right;
             }
+        }
+        &:before {
+            @include desktop {
+                display: none;
+            }
+            background: rgba(0, 0, 0, 0.11);
+            content: '';
+            display: block;
+            height: 1px;
+            position: absolute;
+            min-width: 70%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-20px);
         }
     }
     
