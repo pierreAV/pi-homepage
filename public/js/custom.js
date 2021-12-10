@@ -368,7 +368,7 @@
           plateFormat.destroy();
           plateFormat = null;
       }
-        if ($(this).val().length <= 14) {
+       if ($(this).val().length <= 14) {
           activeFormat = new Cleave('.input-plate', {
               numericOnly: true,
               blocks: [3, 3, 3, 3],
