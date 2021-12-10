@@ -9,7 +9,28 @@ body {
     font-family: Montserrat;
     user-select: none;
 }
+main {
+    background-color: white;
 
+}
+h1 {
+    font-family: Montserrat;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: #000000;
+    margin: 60px auto 0;
+
+    max-width: 30ch;
+
+    @include desktop {
+        max-width: none;
+        margin-top: 70px;
+    }
+
+}
 .hr-gradient {
     background-image: $gradient;
     height: 4px;
@@ -60,27 +81,30 @@ body {
     margin-bottom: 0;
 }
 
-.block-title-black {
-    font-style: italic;
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 20px;
-    text-align: center;
-    color: #000000;
-    position: relative;
-    margin: 20px 0;
-
-    &:after {
-        background: #333333;
-        content: '';
-        display: block;
-        height: 4px;
-        position: absolute;
-        bottom: -20px;
-        width: 43px;
-        left: 50%;
-        transform: translateX(-50%) skew(150deg);
+.block-title-black { 
+    h2, span {
+        font-style: italic;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: center;
+        color: #000000;
+        position: relative;
+        margin: 20px 0;
+    
+        &:after {
+            background: #333333;
+            content: '';
+            display: block;
+            height: 4px;
+            position: absolute;
+            bottom: -20px;
+            width: 43px;
+            left: 50%;
+            transform: translateX(-50%) skew(150deg);
+        }
     }
+    
 }
 
 .landing-block {
@@ -122,7 +146,6 @@ body {
         width: 95%;
         bottom: -40px;
         padding: 3px;
-        min-width: 350px;
         left: 50%;
         transform: translateX(-50%);
         border-radius: 6px;
@@ -134,7 +157,7 @@ body {
     }
     .bg-white {
         background-color: white;
-        padding: 20px;
+        padding: 50px 20px;
         border-radius: 6px;
 
         @include desktop {
@@ -144,6 +167,8 @@ body {
             @include desktop {
                 display: block;
             }
+            font-size: 20px;
+            word-wrap: break-word;
             //display: none;
         }
 
@@ -185,12 +210,11 @@ body {
     text-align: center;
     padding: 25px 30px;
     position: relative;
-    margin-top: 60px;
+    margin-top: 20px;
 
     .title {
         font-style: italic;
         font-weight: bold;
-        font-size: 16px;
         padding: 0 5px;
     }
 
@@ -256,7 +280,9 @@ body {
     position: relative;
     margin-top: 270px;
     border-top: $border-gray;
-    
+    .block-title-black {
+        margin-top: 20px;
+    }
     .block-items {
         justify-content: space-evenly;
     }
@@ -286,6 +312,9 @@ body {
         @include desktop {
             bottom: 30px;
         }
+    }
+    .auto-ex {
+        width: 70vw;
     }
 }
 
@@ -439,25 +468,11 @@ body {
     }
 
     .payment {
-        
-        span, img {
-            vertical-align: middle;
-        }
-        img {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .payment-logo {
             margin-left: 20px;
-        }
-        &:after {
-            @include desktop {
-                display: none;
-            }
-            background: rgba(0, 0, 0, 0.11);
-            content: '';
-            display: block;
-            height: 1px;
-            position: absolute;
-            width: 314px;
-            left: 50%;
-            transform: translateX(-50%) translateY(15px);
         }
     }
     
@@ -472,6 +487,19 @@ body {
             @include desktop {
                 text-align: right;
             }
+        }
+        &:before {
+            @include desktop {
+                display: none;
+            }
+            background: rgba(0, 0, 0, 0.11);
+            content: '';
+            display: block;
+            height: 1px;
+            position: absolute;
+            min-width: 70%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-20px);
         }
     }
     

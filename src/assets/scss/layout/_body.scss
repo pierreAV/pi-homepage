@@ -212,21 +212,6 @@ button {
     }
 }
 
-h1,
-.h1,
-h2,
-.h2 {
-    text-align: center;
-
-    &:after {
-        background-color: $header-secondary-color;
-        content: '';
-        display: table;
-        height: .15rem;
-        margin: 5px auto;
-        width: 4rem;
-    }
-}
 
 /*
 
